@@ -1,0 +1,64 @@
+@relation R_data_frame
+
+@attribute surgery {yes,no}
+@attribute Age {adult,young}
+@attribute rectal_temperature numeric
+@attribute pulse numeric
+@attribute respiratory_rate numeric
+@attribute temp_extremities {normal,warm,cool,cold}
+@attribute peripheral_pulse {normal,increased,reduced,absent}
+@attribute mucous_membranes {'normal pink','bright pink','pale pink','pale cyanotic','bright red','dark cyanotic'}
+@attribute capillary_refill_time {<3,>=3,'meaning unknown'}
+@attribute pain {'alert no pain',depressed,'intermittent mild pain','intermittent severe pain','continuous severe pain'}
+@attribute peristalsis {hypermotile,normal,hypomotile,absent}
+@attribute abdominal_distension {none,slight,moderate,severe}
+@attribute nasogastric_tube {none,slight,significant}
+@attribute nasogastric_reflux {none,>1l,<1l}
+@attribute nasogastric_reflux_PH numeric
+@attribute rectal_examination {normal,increased,decreased,absent}
+@attribute abdomen {normal,other,'firm feces in large intestine','distended small intestine','distended large intestine'}
+@attribute packed_cell_volume numeric
+@attribute total_protein numeric
+@attribute abdominocentesis_appearance {clear,cloudy,serosanguinous}
+@attribute abdomcentesis_total_protein numeric
+@attribute outcome {lived,died,euthanized}
+@attribute surgical_lesion {1,-1}
+
+@data
+no,young,38,92,28,normal,normal,'bright pink',<3,'alert no pain',hypomotile,slight,significant,none,7.2,normal,normal,37,6.1,clear,2.94812,died,-1
+no,adult,37.5,44,20,normal,normal,'pale pink',<3,'intermittent mild pain',hypermotile,none,slight,none,4.962319,normal,'distended large intestine',35,7.2,cloudy,2.94812,lived,-1
+yes,adult,37.2,42,12,warm,normal,'normal pink',<3,'intermittent mild pain',hypomotile,moderate,significant,none,4.962319,absent,'distended large intestine',45.656798,7,cloudy,2.94812,lived,-1
+no,adult,38.134448,52,16,normal,normal,'pale pink',<3,'intermittent mild pain',hypomotile,none,slight,<1l,5.5,absent,'distended large intestine',55,7.2,cloudy,2.94812,lived,-1
+no,adult,38.5,66,28,cool,reduced,'normal pink',>=3,'continuous severe pain',absent,severe,slight,none,4.962319,decreased,'distended large intestine',45,8.4,cloudy,2.94812,died,-1
+no,adult,38.8,50,20,cool,normal,'normal pink',<3,'alert no pain',hypermotile,none,slight,none,4.962319,decreased,normal,42,6.2,cloudy,2.94812,lived,-1
+no,adult,39,64,40,normal,normal,'bright red',<3,'intermittent mild pain',hypomotile,slight,slight,none,4.962319,decreased,'firm feces in large intestine',42,7.5,cloudy,2.3,lived,-1
+no,young,38,92,28,normal,normal,'bright pink',<3,'alert no pain',hypomotile,slight,significant,none,7.2,absent,'distended large intestine',37,6.1,clear,1.1,lived,-1
+no,adult,38.3,112,16,cool,reduced,'bright red',>=3,'intermittent mild pain',hypomotile,none,none,>1l,4.962319,absent,'distended large intestine',51,6,cloudy,1,euthanized,-1
+no,adult,38.4,54,24,normal,normal,'normal pink',<3,'alert no pain',hypomotile,none,slight,none,4.962319,decreased,other,49,7.2,clear,2.94812,lived,-1
+no,adult,38.2,42,26,normal,normal,'normal pink',<3,'intermittent mild pain',hypermotile,slight,slight,none,4.962319,normal,'distended large intestine',36,6.9,cloudy,2.94812,lived,-1
+no,adult,38.3,42,10,normal,normal,'normal pink',<3,'alert no pain',hypermotile,none,slight,none,4.962319,absent,'distended large intestine',38,61,cloudy,2.94812,lived,-1
+no,adult,38.3,40,16,cool,normal,'normal pink',<3,depressed,hypomotile,none,slight,none,4.962319,absent,'distended large intestine',37,57,cloudy,2.94812,lived,-1
+yes,adult,37.4,50,32,cool,reduced,'normal pink',<3,'intermittent severe pain',absent,none,slight,none,4.962319,normal,'distended large intestine',45,7.9,cloudy,1,lived,1
+yes,adult,38.134448,70.75731,30.521886,cool,normal,'normal pink',<3,'intermittent mild pain',hypomotile,none,slight,none,4.962319,absent,'distended large intestine',24,6.7,cloudy,2.94812,lived,1
+yes,adult,38.134448,120,30.521886,cool,absent,'pale cyanotic',<3,'intermittent severe pain',absent,severe,none,none,4.962319,absent,'distended large intestine',52,67,cloudy,2,euthanized,1
+yes,adult,37.8,72,30.521886,cool,reduced,'normal pink',<3,'continuous severe pain',hypomotile,none,slight,none,4.962319,normal,normal,56,80,clear,2,lived,1
+yes,adult,38.134448,70.75731,20,cold,reduced,'pale pink',<3,'continuous severe pain',absent,moderate,slight,none,4.962319,absent,'distended small intestine',53,5.9,serosanguinous,2.94812,died,1
+yes,adult,37.1,75,36,cool,normal,'pale pink',>=3,'intermittent severe pain',absent,slight,slight,<1l,5,absent,'distended small intestine',48,7.4,serosanguinous,3.2,died,1
+yes,adult,39.9,72,60,normal,normal,'bright red',>=3,'continuous severe pain',absent,severe,significant,none,4.962319,absent,'distended small intestine',46,6.1,cloudy,2.94812,lived,1
+yes,adult,37.3,90,40,cool,normal,'dark cyanotic',>=3,'continuous severe pain',absent,moderate,slight,>1l,4.962319,normal,'distended large intestine',65,50,serosanguinous,2,euthanized,1
+no,adult,38.134448,96,30.521886,cool,reduced,'pale pink',>=3,'continuous severe pain',absent,severe,slight,none,4.962319,absent,'distended large intestine',60,24.771077,cloudy,2.94812,died,1
+yes,adult,38.134448,60,20,cold,reduced,'pale cyanotic',>=3,'continuous severe pain',absent,none,slight,none,4.962319,absent,'distended large intestine',45.656798,24.771077,cloudy,2.94812,euthanized,1
+yes,adult,37.8,60,24,normal,normal,'pale pink',>=3,'intermittent mild pain',absent,severe,slight,<1l,2,absent,'distended large intestine',52,75,cloudy,2.94812,euthanized,1
+yes,adult,37.8,40,12,normal,normal,'normal pink',<3,'alert no pain',normal,none,slight,none,4.962319,normal,other,38,7,cloudy,2.94812,lived,1
+yes,adult,38.134448,70.75731,30.521886,cool,reduced,'pale pink','meaning unknown','continuous severe pain',hypomotile,moderate,significant,>1l,4.962319,absent,'distended large intestine',46,5.9,cloudy,2.94812,died,1
+yes,adult,38.134448,52,28,cool,reduced,'pale cyanotic',<3,'intermittent mild pain',absent,moderate,slight,none,4.962319,absent,'distended small intestine',37,8.1,cloudy,2.94812,lived,1
+no,adult,38.3,44,60,cool,normal,'normal pink',<3,'intermittent mild pain',hypomotile,none,slight,none,4.962319,absent,'distended large intestine',6.4,36,cloudy,2.94812,lived,1
+yes,adult,37.6,38,20,cool,reduced,'normal pink',<3,'intermittent mild pain',hypomotile,slight,slight,none,4.962319,decreased,'distended large intestine',37,68,cloudy,2.94812,lived,1
+yes,young,38.134448,70.75731,30.521886,cool,normal,'normal pink',<3,'intermittent mild pain',hypomotile,none,slight,none,4.962319,absent,'distended large intestine',45,6.5,cloudy,2.94812,lived,1
+no,adult,38.8,48,40,normal,normal,'pale pink',<3,'intermittent mild pain',hypomotile,severe,slight,none,4.962319,absent,'distended large intestine',41,65,cloudy,2.94812,lived,1
+yes,adult,36.4,98,35,cool,reduced,'pale cyanotic',<3,'intermittent severe pain',hypomotile,slight,slight,none,4.962319,absent,'distended small intestine',47,6.4,serosanguinous,3.6,died,1
+yes,adult,38,44,12,normal,normal,'normal pink',<3,'intermittent mild pain',hypomotile,moderate,slight,none,4.962319,absent,'distended large intestine',42,65,cloudy,2.94812,lived,1
+yes,adult,37,44,12,cool,normal,'normal pink',>=3,'alert no pain',hypermotile,none,slight,none,4.962319,absent,other,40,6.7,serosanguinous,8,lived,1
+yes,adult,37.3,48,20,cool,normal,'bright pink',<3,'intermittent mild pain',hypomotile,moderate,slight,none,4.962319,decreased,'distended large intestine',41,69,cloudy,2.94812,lived,1
+yes,adult,38.134448,88,40,cool,reduced,'pale cyanotic',>=3,'continuous severe pain',absent,moderate,significant,none,4.962319,absent,'distended large intestine',50,7.7,serosanguinous,1.4,died,1
+yes,adult,38,42,68,cold,normal,'normal pink',<3,'intermittent mild pain',hypomotile,slight,slight,>1l,4.962319,absent,'distended small intestine',41,7.6,cloudy,2.94812,lived,1
