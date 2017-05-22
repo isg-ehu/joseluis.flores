@@ -5,9 +5,9 @@
 ##    OUTPUT: Lista de ceros, 
 ##            Lista de intervalos con los valores de los coeficientes
 ############################################################################
-source("R/K2_Zeros.R")
-source("R/K2_ZeroFiltering.R")
-source("R/K2_find.indexes.R")
+source("lib/K2_Zeros.R")
+source("lib/K2_ZeroFiltering.R")
+source("lib/K2_find.indexes.R")
 
 K2_density <- function(X_PLUS,X_MINUS,NI_PLUS,NI_MINUS,h_plus,h_minus,min,max) {
   interval_PLUS_LEFT <- X_PLUS-h_plus

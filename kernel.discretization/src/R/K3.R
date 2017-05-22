@@ -29,15 +29,18 @@
       args <- commandArgs(trailingOnly = TRUE)
       RunFile           = args[1]
       RUNINFO           = read.csv(RunFile)
-      DataPath          = RUNINFO[1,1]
+      DataPath			= args[2]
       TrainFile         = str_replace_all(paste(DataPath,toString(RUNINFO[1,2])),fixed(" "),"")
       TestFile          = str_replace_all(paste(DataPath,toString(RUNINFO[1,3])),fixed(" "),"")
       vars              = RUNINFO[ ,4]
       classPos          = RUNINFO[1,5]
-      LogPath           = RUNINFO[1,6]
-      TrainDFile        = str_replace_all(paste(LogPath,toString(RUNINFO[1,2])),fixed(" "),"")
-      TestDFile         = str_replace_all(paste(LogPath,toString(RUNINFO[1,3])),fixed(" "),"")
-      numHs             = RUNINFO[1,7]
+      LogPath           = args[3]
+      ResultsPath 		= args[4]
+      TrainDFile        = str_replace_all(paste(ResultsPath,toString(RUNINFO[1,2])),fixed(" "),"")
+      TestDFile         = str_replace_all(paste(ResultsPath,toString(RUNINFO[1,3])),fixed(" "),"")
+      numHs             = as.numeric(args[5])
+
+	print(numHs)
 
       logging(LogPath,FILE,"Phase 1","BEGIN","Parameter initialization")
       logging(LogPath,FILE,"Phase 1","Step 1: Log File",FILE)
@@ -70,6 +73,7 @@
       logging(LogPath,FILE,"Phase 1","Step 3: Test File Instances",toString(TestNumInstances))
       logging(LogPath,FILE,"Phase 1","Step 3: Test File Variables",toString(TestNumVariables))      
       # Step 5. Creacion de variables globales - LOG
+      
       H = array(dim=c(length(vars),numHs))
       HReal = array(dim=c(length(vars)))
       strACC_Method=c("Approximate","Exact")
@@ -88,6 +92,8 @@
       logging(LogPath,FILE,"Phase 1","Step 4: Exponent",toString(Exponent))
       logging(LogPath,FILE,"Phase 1","Step 5: Global variables creation","SUCCESS!")      
       ## Step 6. Calcular los vectores H para todas las variables indicadas. - LOG
+      print(length(vars))
+      print(numHs)
       for(i in 1:length(vars)) {
         for(j in 1:numHs) {
           H  [i,j]=0 
@@ -239,7 +245,7 @@
               } else {
                 ACC.Temp=0
               }
-              logging(LogPath,FILE,"Phase 2",paste("<",toString(var),",",toString(repetition),",",toString(i),",",toString(h),">","ACC[var,h] "),toString(ACC[which(vars==var),h]))
+              logging(LogPath,FILE,"Phase 2",paste("<",toString(var),",",toString(repetition),",",toString(i),",",toString(h),">","ACC[var,h] "),toString(ACC.Temp))
               logging(LogPath,FILE,"Phase 2",paste("<",toString(var),",",toString(repetition),",",toString(i),",",toString(h),">","Zeros  ") ,toString(ZEROS))
               logging(LogPath,FILE,"Phase 2",paste("<",toString(var),",",toString(repetition),",",toString(i),",",toString(h),">","Num zeros ") ,toString(numZeros))   
               print(bestACC)
