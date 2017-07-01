@@ -1,0 +1,2 @@
+DataPath,TrainFile,TestFile,DiscVar,ClassPos,LogPath,NumHs
+22/,22.09.train.arff,22.09.test.arff,2,6,/home/jlflores/src/22/,100

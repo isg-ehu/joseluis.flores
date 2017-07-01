@@ -1,0 +1,10 @@
+DataPath,TrainFile,TestFile,DiscVar,ClassPos,LogPath,NumHs
+20/,20.07.train.arff,20.07.test.arff,1,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,3,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,4,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,5,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,6,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,7,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,8,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,9,11,/home/jlflores/src/20/,100
+20/,20.07.train.arff,20.07.test.arff,10,11,/home/jlflores/src/20/,100
