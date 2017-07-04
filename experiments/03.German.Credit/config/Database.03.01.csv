@@ -1,4 +1,0 @@
-DataPath,TrainFile,TestFile,DiscVar,ClassPos,LogPath,NumHs
-03/,03.01.train.arff,03.01.test.arff,2,21,/home/jlflores/src/03/,100
-03/,03.01.train.arff,03.01.test.arff,5,21,/home/jlflores/src/03/,100
-03/,03.01.train.arff,03.01.test.arff,13,21,/home/jlflores/src/03/,100
